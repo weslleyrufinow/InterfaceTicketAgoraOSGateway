@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk / Ticket / Editar - AgoraOS</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <!-- Font Awesome for icons (simulated based on image) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo-area">
+            <span class="logo-text">AGORAOS</span>
+            <button id="darkModeToggle" class="btn-xs theme-toggle-btn" title="Ativar/Desativar Modo Escuro">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="header-right">
+            <div class="notifications">
+                <span class="badge-icon"><i class="fas fa-bell"></i> <span class="badge">0</span></span>
+                <span class="badge-icon"><i class="fas fa-tasks"></i> <span class="badge red">0</span></span>
+                <span class="badge-icon"><i class="fas fa-envelope"></i> <span class="badge blue">0</span></span>
+                <span class="badge-icon"><i class="fas fa-cog"></i> <span class="badge">0</span></span>
+            </div>
+            <button class="pdv-btn"><i class="fas fa-external-link-alt"></i> PDV</button>
+            <div class="user-info">
+                <div class="user-details">
+                    <span>Antonio Weslley Silvio Moreira...</span>
+                    <small>GATEWAY SOLUÇÕES EM T.I</small>
+                </div>
+                <i class="fas fa-times-circle close-icon"></i>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Buscar Serial">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Busca por cliente">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="profile-pic">
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=random" alt="User">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="#"><i class="fas fa-headset"></i> Atendimento</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Pessoas</a></li>
+            <li class="active"><a href="#"><i class="fas fa-life-ring"></i> Help Desk</a></li>
+            <li><a href="#"><i class="fas fa-box"></i> Estoque</a></li>
+            <li><a href="#"><i class="fas fa-tags"></i> Cadastros</a></li>
+            <li><a href="#"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content-wrapper">
+        <div class="breadcrumb">
+            <i class="fas fa-sync-alt refresh-icon"></i> <span>Help Desk / Ticket / Editar</span>
+            <i class="fas fa-cog settings-icon-right"></i>
+        </div>
+
+        <div class="card">
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active">Ticket</button>
+                <button class="tab-btn">Arquivos</button>
+            </div>
+
+            <div class="tab-content">
+                <div class="ticket-content-grid">
+                    <div class="ticket-main-col">
+
+                        <form class="ticket-form">
+                            <div class="form-group">
+                                <label>ID:</label>
+                                <div class="value">
+                                    <a href="#">33806</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Cliente:</label>
+                                <div class="input-display">
+                                    <a href="#">Valenca e Associados (Contrato X)</a>
+                                    <button type="button" class="btn-xs"><i class="fas fa-user"></i> Exibir
+                                        Contato</button>
+                                    <button type="button" class="btn-xs"><i class="fas fa-pencil-alt"></i>
+                                        Editar</button>
+                                </div>
+                            </div>
+
+
+                            <div class="ticket-details-row">
+                                <div class="ticket-details-left">
+                                    <div class="form-group">
+                                        <label>Autor:</label>
+                                        <div class="input-display">
+                                            <span>Antonio Weslley Silvio Moreira Rufino (weslleyrufino)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Status:</label>
+                                        <select class="form-control">
+                                            <option>Aberto</option>
+                                            <option>Fechado</option>
+                                            <option>Em atendimento</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>TAG Primária *:</label>
+                                        <select class="form-control">
+                                            <option>FORTES LOCAL</option>
+                                            <option>FORTES CLOUD</option>
+                                            <option>SISTEMA CLOUD HOSPEDADO</option>
+                                            <option>FIREWALL</option>
+                                            <option>REDE</option>
+                                            <option>IMPRESSORA</option>
+                                            <option>COMPUTADOR</option>
+                                            <option>HARDWARE DIVERSO</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>TAG Secundária:</label>
+                                        <select class="form-control">
+                                            <option>ERRO</option>
+                                            <option>CONFIGURAÇÃO</option>
+                                            <option>INSTALAÇÃO</option>
+                                            <option>CONSULTORIA</option>
+                                            <option>SUPORTE</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Responsável:</label>
+                                        <select class="form-control">
+                                            <option>Antonio Weslley Silvio Moreira Rufino</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="ticket-details-right">
+                                    <div class="form-group align-start">
+                                        <label>Abrangência do contrato:</label>
+                                        <div class="display">
+                                            <ul class="contract-scope-list">
+                                                <li>Suporte TI Presencial</li>
+                                                <li>Suporte TI Remoto</li>
+                                                <li>Suporte Firewall</li>
+                                                <li>Suporte Rede</li>
+                                                <li>Criação ilimitada de usuários</li>
+                                                <li>10 GB Banco de dados</li>
+                                                <li>04 usuários</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <div class="equipments-section">
+                            <h4>Eventos Internos</h4>
+                            <hr>
+                            <table class="events-table">
+                                <thead>
+                                    <tr>
+                                        <th>Usuario</th>
+                                        <th>Data e Hora</th>
+                                        <th>Descrição</th>
+                                        <th>Tempo Gasto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>weslleyrufino</td>
+                                        <td>22/12/2025 12:48</td>
+                                        <td>Efetuadas alteração na instalação</td>
+                                        <td>10 min</td>
+                                        <td><button class="btn-icon-red"><i class="fas fa-times"></i></button></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <div class="inline-event-form">
+                                <h5 class="form-section-title">Novo Evento Interno</h5>
+
+                                <div class="event-dates-row">
+
+
+                                    <div class="form-group">
+                                        <label>Início:</label>
+                                        <div class="date-time-group-vertical">
+                                            <div class="input-with-icon">
+                                                <input type="date" id="eventStartDate"
+                                                    class="form-control event-date-input">
+                                            </div>
+                                            <div class="time-row">
+                                                <div class="input-with-icon">
+                                                    <input type="time" id="eventStartTime"
+                                                        class="form-control event-time-input">
+                                                </div>
+                                                <button id="setStartCurrentTimeBtn" class="btn-xs height-fix"
+                                                    type="button" title="Definir horário atual">Atual</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Término:</label>
+                                        <div class="date-time-group-vertical">
+                                            <div class="input-with-icon">
+                                                <input type="date" id="eventEndDate"
+                                                    class="form-control event-date-input">
+                                            </div>
+                                            <div class="time-row">
+                                                <div class="input-with-icon">
+                                                    <input type="time" id="eventEndTime"
+                                                        class="form-control event-time-input">
+                                                </div>
+                                                <button id="setEndCurrentTimeBtn" class="btn-xs height-fix"
+                                                    type="button" title="Definir horário atual">Atual</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Duração:</label>
+                                    <input type="text" id="eventDuration" class="form-control event-duration-input"
+                                        disabled>
+                                </div>
+
+                                <div class="form-group align-start">
+                                    <label class="label-textarea">Descrição:</label>
+                                    <textarea id="eventDescription" class="form-control event-description-input"
+                                        placeholder="REGRA:Início e Término devem começar com a hora em que o Ticket foi aberto."></textarea>
+                                </div>
+
+                                <div class="main-actions"
+                                    style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e9ecef; justify-content: space-between; display: flex;">
+                                    <button id="insertAndCopyToClientBtn" class="btn btn-info"><i
+                                            class="fas fa-copy"></i> Inserir Evento e Copiar Para Cliente</button>
+                                    <button id="insertEventBtn" class="btn btn-dark-blue"><i class="fas fa-comment"></i>
+                                        Inserir Evento</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="equipments-section">
+                            <h4>Resumo ao cliente</h4>
+                            <hr>
+                            <div class="message-box-container">
+                                <textarea id="clientMessageInput" class="form-control client-message-input"
+                                    placeholder="Digite o resumo para o cliente..."></textarea>
+                                <div class="main-actions"
+                                    style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px; margin-top: 10px;">
+                                    <button id="saveMessageBtn" class="btn btn-success"><i
+                                            class="fas fa-save"></i>Salvar mensagem</button>
+                                    <button class="btn btn-danger"><i class="fas fa-ban"></i> Fechar Ticket</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End ticket-main-col -->
+
+                    <div class="ticket-log-col">
+                        <div class="history-log">
+                            <h4>Log de Atendimento</h4>
+                            <!-- Log Item 1 -->
+                            <div class="log-item">
+                                <img src="https://ui-avatars.com/api/?name=A+W&background=random" class="avatar">
+                                <div class="log-content">
+                                    <div class="log-header">
+                                        <strong>Antonio Weslley Silvio Moreira Rufino</strong>
+                                        <span class="timestamp">22/12/2025 12:49:13</span>
+                                    </div>
+                                    <p>Ticket fechado pelo operador.</p>
+                                </div>
+                            </div>
+
+                            <!-- Log Item 2 -->
+                            <div class="log-item">
+                                <img src="https://ui-avatars.com/api/?name=A+W&background=random" class="avatar">
+                                <div class="log-content">
+                                    <div class="log-header">
+                                        <strong>Antonio Weslley Silvio Moreira Rufino</strong>
+                                        <span class="timestamp">22/12/2025 12:49:00</span>
+                                    </div>
+                                    <p>- Efetuada alteração na instalação VPN</p>
+                                </div>
+                            </div>
+                            <!-- Log Item 4 -->
+                            <div class="log-item">
+                                <img src="https://ui-avatars.com/api/?name=A+W&background=random" class="avatar">
+                                <div class="log-content">
+                                    <div class="log-header">
+                                        <strong>Antonio Weslley Silvio Moreira Rufino</strong>
+                                        <span class="timestamp">22/12/2025 12:48:48</span>
+                                    </div>
+                                    <p>Responsável definido como "Antonio Weslley Silvio Moreira Rufino".
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Log Item 6 -->
+                            <div class="log-item">
+                                <img src="https://ui-avatars.com/api/?name=A+W&background=random" class="avatar">
+                                <div class="log-content">
+                                    <div class="log-header">
+                                        <strong>Antonio Weslley Silvio Moreira Rufino</strong>
+                                        <span class="timestamp">22/12/2025 12:48:48</span>
+                                    </div>
+                                    <p>Ticket alterado para "Em Atendimento" pelo operador.</p>
+                                </div>
+                            </div>
+
+                            <!-- Log Item 7 (The big chat block) -->
+                            <div class="log-item">
+                                <img src="https://ui-avatars.com/api/?name=A+W&background=random" class="avatar">
+                                <div class="log-content">
+                                    <div class="log-header">
+                                        <strong>Antonio Weslley Silvio Moreira Rufino</strong>
+                                        <span class="timestamp">22/12/2025 12:48:48</span>
+                                    </div>
+                                    <div class="chat-transcript">
+                                        [12:10, 22/12/2025] +55 85 7401-3088: Bom dia. @SUPORTE REMOTO
+                                        [Linhares e Weslley]<br>
+                                        [12:10, 22/12/2025] +55 85 7401-3088: Temos duas máquinas usando o
+                                        acesso remoto com o mesmo
+                                        Usuário<br>
+                                        [12:10, 22/12/2025] +55 85 7401-3088: Poderia verificar se teria
+                                        como colocar em usuários
+                                        diferentes para evitar conflitos?<br>
+                                        [12:11, 22/12/2025] +55 85 7401-3088: Precisamos também de uma pasta
+                                        de arquivos remotos
+                                        cloud
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- End ticket-content-grid -->
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        // Inline Event Form Logic
+
+        // Inputs
+        const startDateInput = document.getElementById("eventStartDate");
+        const startTimeInput = document.getElementById("eventStartTime");
+        const endDateInput = document.getElementById("eventEndDate");
+        const endTimeInput = document.getElementById("eventEndTime");
+        const durationInput = document.getElementById("eventDuration");
+        const descriptionInput = document.getElementById("eventDescription");
+
+        const setStartCurrentTimeBtn = document.getElementById("setStartCurrentTimeBtn");
+        const setEndCurrentTimeBtn = document.getElementById("setEndCurrentTimeBtn");
+
+        const insertEventBtn = document.getElementById("insertEventBtn");
+        const insertAndCopyToClientBtn = document.getElementById("insertAndCopyToClientBtn");
+        const eventsTableBody = document.querySelector(".events-table tbody");
+        const historyLog = document.querySelector(".history-log");
+
+        // Helper to format date/time for Inputs (yyyy-mm-dd / HH:mm)
+        function formatInputDate(date) {
+            const y = date.getFullYear();
+            const m = String(date.getMonth() + 1).padStart(2, '0');
+            const d = String(date.getDate()).padStart(2, '0');
+            return `${y}-${m}-${d}`;
+        }
+
+        function formatInputTime(date) {
+            return date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+        }
+
+        // Helper to format date for display (dd/mm/yyyy)
+        function formatDisplayDate(date) {
+            return date.toLocaleDateString('pt-BR');
+        }
+
+        // Duration Formatter
+        function formatDuration(ms) {
+            const seconds = Math.floor((ms / 1000) % 60);
+            const minutes = Math.floor((ms / (1000 * 60)) % 60);
+            const hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
+            const days = Math.floor(ms / (1000 * 60 * 60 * 24));
+
+            let parts = [];
+            if (days > 0) parts.push(`${days}d`);
+            if (hours > 0) parts.push(`${hours}h`);
+            if (minutes > 0) parts.push(`${minutes}m`);
+            // if (seconds > 0) parts.push(`${seconds}s`); 
+
+            if (parts.length === 0) return "0m";
+            return parts.join(' ');
+        }
+
+        function parseDateTime(dateStr, timeStr) {
+            // Parses yyyy-mm-dd and HH:mm
+            if (!dateStr || !timeStr) return null;
+            const dMy = dateStr.split('-');
+            const hm = timeStr.split(':');
+
+            if (dMy.length !== 3 || hm.length !== 2) return null;
+
+            return new Date(
+                parseInt(dMy[0]), parseInt(dMy[1]) - 1, parseInt(dMy[2]),
+                parseInt(hm[0]), parseInt(hm[1])
+            );
+        }
+
+        function updateDuration() {
+            const start = parseDateTime(startDateInput.value, startTimeInput.value);
+            const end = parseDateTime(endDateInput.value, endTimeInput.value);
+
+            if (start && end) {
+                let diff = end - start;
+                // If diff is negative (end before start), just show 0m or handle error
+                if (diff < 0) diff = 0;
+
+                durationInput.value = formatDuration(diff);
+            } else {
+                durationInput.value = "";
+            }
+        }
+
+        function setNow(isStart) {
+            const now = new Date();
+            const dateStr = formatInputDate(now);
+            const timeStr = formatInputTime(now);
+
+            if (isStart) {
+                startDateInput.value = dateStr;
+                startTimeInput.value = timeStr;
+            } else {
+                endDateInput.value = dateStr;
+                endTimeInput.value = timeStr;
+
+                // Ensure end is not before start if possible
+                const start = parseDateTime(startDateInput.value, startTimeInput.value);
+                if (start && now < start) {
+                    // Forcing end to be at least start + 1 min or same? 
+                    // User requested logic: "se o momento for menor que 1min ... autocomplete para 1min"
+                    // We can implement that check here or relative to start
+                }
+
+                // Check if < 1m interval from start
+                if (start) {
+                    let diff = now - start;
+                    if (diff >= 0 && diff < 60000) {
+                        // Force 1 minute
+                        const adjustedEnd = new Date(start.getTime() + 60000);
+                        endDateInput.value = formatInputDate(adjustedEnd);
+                        endTimeInput.value = formatInputTime(adjustedEnd);
+                    }
+                }
+            }
+            updateDuration();
+        }
+
+        // Initialize with Page Load Time
+        const pageLoadTime = new Date();
+        startDateInput.value = formatInputDate(pageLoadTime);
+        startTimeInput.value = formatInputTime(pageLoadTime);
+        endDateInput.value = formatInputDate(pageLoadTime);
+        endTimeInput.value = formatInputTime(pageLoadTime);
+        updateDuration();
+
+        // Event Listeners
+        setStartCurrentTimeBtn.onclick = function () {
+            setNow(true);
+        };
+
+        setEndCurrentTimeBtn.onclick = function () {
+            setNow(false);
+        }
+
+
+        // Listen for manual changes to update duration
+        startDateInput.addEventListener('change', updateDuration);
+        startTimeInput.addEventListener('change', updateDuration);
+        endDateInput.addEventListener('change', updateDuration);
+        endTimeInput.addEventListener('change', updateDuration);
+
+
+        // Helper function for inserting event
+        function performInsertEvent() {
+            const desc = descriptionInput.value.trim();
+            if (!desc) {
+                alert("Por favor, insira uma descrição para o evento.");
+                return false;
+            }
+
+            // Get values
+            const startObj = parseDateTime(startDateInput.value, startTimeInput.value);
+            const displayDate = startObj ? `${formatDisplayDate(startObj)} ${startTimeInput.value}` : "";
+
+            const durationVal = durationInput.value;
+            const currentUser = "weslleyrufino";
+
+            // Add to Table
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+                <td>${currentUser}</td>
+                <td>${displayDate}</td>
+                <td>${desc}</td>
+                <td>${durationVal}</td>
+                <td><button class="btn-icon-red"><i class="fas fa-times"></i></button></td>
+            `;
+
+            eventsTableBody.insertBefore(newRow, eventsTableBody.firstChild);
+
+            // Add to Log
+            const now = new Date();
+            const dateLog = formatDisplayDate(now);
+            const timeLog = formatInputTime(now);
+
+            const logItem = document.createElement("div");
+            logItem.className = "log-item";
+            logItem.innerHTML = `
+                <img src="https://ui-avatars.com/api/?name=Antonio+Weslley&background=random" class="avatar">
+                <div class="log-content">
+                    <div class="log-header">
+                        <strong>Antonio Weslley Silvio Moreira Rufino</strong>
+                        <span class="timestamp">${dateLog} ${timeLog}</span>
+                    </div>
+                    <p>Evento inserido: ${desc}</p>
+                    <p>(Duração: ${durationVal})</p>
+                </div>
+            `;
+
+            const h4 = historyLog.querySelector("h4");
+            if (h4.nextSibling) {
+                historyLog.insertBefore(logItem, h4.nextSibling);
+            } else {
+                historyLog.appendChild(logItem);
+            }
+
+            return true;
+        }
+
+        function resetEventForm() {
+            descriptionInput.value = "";
+            const nextTime = new Date();
+            startDateInput.value = formatInputDate(nextTime);
+            startTimeInput.value = formatInputTime(nextTime);
+            endDateInput.value = formatInputDate(nextTime);
+            endTimeInput.value = formatInputTime(nextTime);
+            updateDuration();
+        }
+
+        // Insert & Copy Logic
+        insertAndCopyToClientBtn.onclick = function () {
+            // First validation check for desription
+            const desc = descriptionInput.value.trim();
+            if (!desc) {
+                alert("Por favor, insira uma descrição.");
+                return;
+            }
+
+            // 1. Insert Event
+            if (performInsertEvent()) {
+                // 2. Copy to Client Message and Save (Log)
+                document.getElementById("clientMessageInput").value = desc;
+                document.getElementById("saveMessageBtn").click();
+
+                // 3. Reset form
+                resetEventForm();
+            }
+        }
+
+        // Insert Event Logic
+        insertEventBtn.onclick = function () {
+            if (performInsertEvent()) {
+                resetEventForm();
+            }
+        }
+
+        // Handle Delete Button for dynamically added rows
+        eventsTableBody.addEventListener('click', function (e) {
+            if (e.target.closest('.btn-icon-red')) {
+                const btn = e.target.closest('.btn-icon-red');
+                const row = btn.closest('tr');
+                if (row) {
+                    if (confirm("Deseja remover este evento?")) {
+                        row.remove();
+                    }
+                }
+            }
+        });
+
+        // Save Message Logic (unchanged)
+        const saveMessageBtn = document.getElementById("saveMessageBtn");
+        const clientMessageInput = document.getElementById("clientMessageInput");
+
+        saveMessageBtn.onclick = function () {
+            const message = clientMessageInput.value.trim();
+            if (message === "") return; // Don't save empty messages
+
+            // Get current date and time
+            const now = new Date();
+            const date = now.toLocaleDateString('pt-BR');
+            const time = now.toLocaleTimeString('pt-BR');
+
+            // Create new log item
+            const newItem = document.createElement("div");
+            newItem.className = "log-item";
+            newItem.innerHTML = `
+                <img src="https://ui-avatars.com/api/?name=Antonio+Weslley&background=random" class="avatar">
+                <div class="log-content">
+                    <div class="log-header">
+                        <strong>Antonio Weslley Silvio Moreira Rufino</strong>
+                        <span class="timestamp">${date} ${time}</span>
+                    </div>
+                    <p>Mensagem ao Cliente: ${message}</p>
+                </div>
+            `;
+
+            // Insert after the h4 title (newest on top)
+            const h4 = historyLog.querySelector("h4");
+            if (h4.nextSibling) {
+                historyLog.insertBefore(newItem, h4.nextSibling);
+            } else {
+                historyLog.appendChild(newItem);
+            }
+
+            // Clear input
+            clientMessageInput.value = "";
+        }
+    </script>
+
+    <script>
+        // Dark Mode Logic
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const icon = toggleBtn.querySelector('i');
+        const body = document.body;
+
+        // Check local storage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+    </script>
+</body>
+
+</html>

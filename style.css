@@ -1,0 +1,1307 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f2f7;
+    /* Light gray background */
+    color: #333;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Header */
+.main-header {
+    background-color: #2c3e50;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-area {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    color: #ecf0f1;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notifications {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+}
+
+.badge-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    color: #95a5a6;
+}
+
+.badge-icon:hover {
+    color: #fff;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #95a5a6;
+    color: white;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.badge.red {
+    background-color: #e74c3c;
+}
+
+.badge.blue {
+    background-color: #3498db;
+}
+
+.pdv-btn {
+    background-color: #8bc34a;
+    /* Light green */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-right: 1px solid #48627b;
+    padding-right: 15px;
+    margin-right: -5px;
+}
+
+.user-details {
+    text-align: right;
+    line-height: 1.2;
+}
+
+.user-details span {
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.user-details small {
+    display: block;
+    color: #bdc3c7;
+    font-size: 10px;
+}
+
+.close-icon {
+    color: #bdc3c7;
+    cursor: pointer;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    background-color: #1a252f;
+    border: none;
+    color: #bdc3c7;
+    padding: 5px 30px 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    width: 150px;
+}
+
+.search-box i {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    color: #bdc3c7;
+    font-size: 12px;
+}
+
+.profile-pic img {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+/* Navigation */
+.main-nav {
+    background-color: #fff;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 10px 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #777;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    gap: 5px;
+}
+
+.main-nav li a i {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.main-nav li:hover a,
+.main-nav li.active a {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.refresh-icon {
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.settings-icon-right {
+    margin-left: auto;
+    background-color: #f1c40f;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Card & Tabs */
+.card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.tabs {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px 0;
+    background-color: #f9f9f9;
+}
+
+.tab-btn {
+    background: none;
+    border: 1px solid transparent;
+    border-bottom: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: -1px;
+    border-radius: 4px 4px 0 0;
+}
+
+.tab-btn.active {
+    background-color: #fff;
+    border-color: #ddd;
+    color: #333;
+}
+
+.tab-btn .badge-small {
+    background-color: #e77e7e;
+    color: white;
+    font-size: 9px;
+    padding: 1px 4px;
+    border-radius: 2px;
+    margin-left: 3px;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+/* Alerts and Info */
+.alert-warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.ticket-header-info {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.ticket-header-info .row {
+    display: flex;
+    align-items: baseline;
+}
+
+.ticket-header-info .label {
+    font-weight: bold;
+    color: #555;
+    width: 80px;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.ticket-header-info .value {
+    color: #333;
+    flex-grow: 1;
+}
+
+.ticket-header-info .right-align {
+    width: auto;
+    margin-left: 30px;
+}
+
+/* Form Styles */
+.ticket-form .form-group {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.ticket-form label {
+    width: 120px;
+    text-align: right;
+    margin-right: 15px;
+    font-weight: 600;
+    color: #555;
+    font-size: 12px;
+}
+
+
+.form-control {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #444;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 320px;
+    /* Keep existing width logic roughly, but unified */
+}
+
+.form-control:focus {
+    border-color: #5bc0de;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(91, 192, 222, 0.1);
+}
+
+select.form-control {
+    background-color: #fff;
+    height: auto;
+}
+
+input[type="text"].form-control {
+    background-color: #fff;
+}
+
+/* Tags Grid */
+.tags-grid {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    /* Max 5 rows */
+    grid-auto-flow: column;
+    /* Fill columns first */
+    gap: 10px 20px;
+    /* Row gap 10px, Column gap 20px */
+}
+
+.tag-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: #555;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.input-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.input-display a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.input-display span {
+    color: #337ab7;
+}
+
+.btn-xs {
+    padding: 2px 6px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #333;
+}
+
+.btn-xs i {
+    margin-right: 3px;
+}
+
+.equipments-section {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.equipments-section h4 {
+    font-weight: 400;
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.equipments-section hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.actions-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.actions-toolbar .right-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-teal {
+    background-color: #009688;
+    /* Standard Material Teal */
+    color: white;
+}
+
+.btn-teal:hover {
+    background-color: #00796b;
+}
+
+/* Events Table */
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.events-table th {
+    background-color: #f7f7f7;
+    color: #555;
+    text-align: left;
+    padding: 10px;
+    font-weight: 700;
+    border-bottom: 2px solid #ddd;
+}
+
+.events-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.events-table td:last-child {
+    text-align: center;
+}
+
+.btn-icon-red {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Actions */
+.main-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+/* Button Colors - Improved Readability & Contrast */
+
+.btn-info {
+    background-color: #008CBA;
+    /* Deep Cerulean */
+}
+
+.btn-info:hover {
+    background-color: #007B9E;
+}
+
+/* Light blue for equipment -> Now a distinct Slate Blue */
+.btn-primary {
+    background-color: #4A69BD;
+}
+
+.btn-primary:hover {
+    background-color: #1e3799;
+}
+
+/* Red for close ticket -> Higher contrast red */
+.btn-danger {
+    background-color: #E74C3C;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Light green for save -> Darker Fern Green */
+.btn-success {
+    background-color: #27ae60;
+}
+
+.btn-success:hover {
+    background-color: #219150;
+}
+
+.btn-dark-blue {
+    background-color: #2c3e50;
+}
+
+.btn-dark-blue:hover {
+    background-color: #1a252f;
+}
+
+
+/* Chat Area */
+.chat-area {
+    padding: 20px;
+}
+
+.message-input textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    padding: 10px;
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.chat-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.history-log {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.log-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.log-item .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    /* Slightly rounded square */
+    border: 1px solid #ddd;
+}
+
+.log-content {
+    flex-grow: 1;
+}
+
+.log-header {
+    margin-bottom: 5px;
+}
+
+.log-header strong {
+    color: #337ab7;
+    font-size: 13px;
+}
+
+.log-header .timestamp {
+    float: right;
+    color: #555;
+    /* Darker color for visibility */
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.log-content p {
+    color: #555;
+    font-size: 12px;
+    margin: 0;
+}
+
+.chat-transcript {
+
+    color: #555;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: flex-start;
+    /* Aligns closer to top like screenshot */
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 800px;
+    /* Wide modal */
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #777;
+}
+
+.close-modal-btn {
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-modal-btn:hover {
+    color: #000;
+}
+
+.modal-alert {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-bottom: 1px solid #faebcc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.modal-alert .close-alert {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: #c09853;
+}
+
+.modal-body {
+    padding: 20px 40px;
+    font-size: 12px;
+    color: #333;
+}
+
+.modal-form .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-form label {
+    width: 150px;
+    text-align: right;
+    margin-right: 20px;
+    font-weight: 700;
+    color: #555;
+}
+
+.modal-form .required::after {
+    /* content: "*"; moved to icon for more control */
+    color: #a94442;
+}
+
+.required-icon {
+    color: #a94442;
+    font-size: 8px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.static-text {
+    font-size: 12px;
+}
+
+.text-red {
+    color: #d9534f;
+}
+
+.spacer-left {
+    margin-left: 170px;
+    /* Label width + margin */
+}
+
+.help-text {
+    color: #999;
+    font-size: 11px;
+}
+
+.highlight-bg {
+    background-color: #fff9c4;
+    /* Yellow highlight */
+    margin: 0 -40px 15px -40px;
+    /* Negative margin to span full width */
+    padding: 10px 40px;
+    border-top: 1px solid #faebcc;
+    border-bottom: 1px solid #faebcc;
+}
+
+.date-time-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon input {
+    padding: 6px 30px 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 140px;
+    background-color: #eee;
+    /* Disabled look or just bg */
+}
+
+.input-with-icon i {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    color: #555;
+}
+
+.modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fff;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Layout Restructure - Ticket Grid */
+.ticket-content-grid {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.ticket-main-col {
+    flex: 1;
+    min-width: 0;
+}
+
+.ticket-log-col {
+    width: 380px;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-left: 1px solid #999;
+    /* Higher contrast border */
+    padding-left: 20px;
+}
+
+.history-log {
+    margin-top: 0;
+    border-top: none;
+    max-height: 700px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Custom Scrollbar for log */
+.history-log::-webkit-scrollbar {
+    width: 6px;
+}
+
+.history-log::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.history-log::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.history-log::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+/* Cleanup & Helpers */
+.align-start {
+    align-items: flex-start !important;
+}
+
+.contract-scope-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.client-message-input {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.input-disabled-custom {
+    width: 150px;
+    background-color: #eee;
+}
+
+.help-text-margin {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.textarea-modal {
+    width: 100%;
+    height: 80px;
+}
+
+.label-modal-desc {
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    margin-left: 15px;
+    border: 1px solid #48627b;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode (VS Code Style) */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+}
+
+body.dark-mode .main-header {
+    background-color: #252526;
+    /* Activity Bar color or similar */
+    box-shadow: none;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .card,
+body.dark-mode .main-nav,
+body.dark-mode .ticket-log-col,
+body.dark-mode .modal-content,
+body.dark-mode .modal-footer,
+body.dark-mode .ticket-header-info .value {
+    background-color: #252526;
+    /* Editor background */
+    color: #d4d4d4;
+    border-color: #3e3e42;
+}
+
+body.dark-mode .main-nav li a {
+    color: #969696;
+}
+
+body.dark-mode .main-nav li:hover a,
+body.dark-mode .main-nav li.active a {
+    color: #fff;
+}
+
+body.dark-mode .tab-btn {
+    color: #969696;
+}
+
+body.dark-mode .tab-btn.active {
+    background-color: #1e1e1e;
+    /* Active tab background */
+    color: #fff;
+    border-color: #252526;
+    /* Blend with card */
+    border-top: 1px solid #007fd4;
+    /* Active tab indicator */
+}
+
+body.dark-mode .tabs {
+    background-color: #2d2d2d;
+    /* Tab container background */
+    border-bottom: 1px solid #252526;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .input-disabled-custom {
+    background-color: #3c3c3c;
+    /* Input background */
+    border: 1px solid #3c3c3c;
+    color: #cccccc;
+}
+
+body.dark-mode .form-control:focus {
+    border-color: #007fd4;
+    outline: none;
+}
+
+body.dark-mode .ticket-form label,
+body.dark-mode .ticket-header-info .label,
+body.dark-mode .equipments-section h4 {
+    color: #9cdcfe;
+    /* Light blue for labels */
+}
+
+body.dark-mode .input-display a,
+body.dark-mode .input-display span {
+    color: #4ec9b0;
+    /* Teal for links/values */
+}
+
+body.dark-mode .btn-xs {
+    background-color: #333;
+    border-color: #444;
+    color: #d4d4d4;
+}
+
+body.dark-mode .events-table {
+    background-color: #252526;
+    border-color: #444;
+}
+
+body.dark-mode .events-table th {
+    background-color: #333;
+    color: #d4d4d4;
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .events-table td {
+    color: #d4d4d4;
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .history-log {
+    border-top: none;
+}
+
+body.dark-mode .log-item {
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .log-item .avatar {
+    border-color: #444;
+}
+
+body.dark-mode .log-header strong {
+    color: #569cd6;
+    /* Blue for names */
+}
+
+body.dark-mode .log-header .timestamp {
+    color: #858585;
+}
+
+body.dark-mode .log-content p,
+body.dark-mode .chat-transcript {
+    color: #d4d4d4;
+}
+
+body.dark-mode .ticket-log-col {
+    background-color: #252526;
+    border-left: 1px solid #3e3e42;
+}
+
+/* Modal Dark Mode fixes */
+body.dark-mode .close-modal-btn {
+    color: #d4d4d4;
+}
+
+body.dark-mode .highlight-bg {
+    background-color: #333;
+    border-color: #444;
+}
+
+body.dark-mode .help-text {
+    color: #858585;
+}
+
+/* Scrollbar Dark Mode */
+body.dark-mode .history-log::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+body.dark-mode .history-log::-webkit-scrollbar-thumb {
+    background: #424242;
+}
+
+body.dark-mode .history-log::-webkit-scrollbar-thumb:hover {
+    background: #4f4f4f;
+}
+
+/* Inline Event Form */
+.inline-event-form {
+    background-color: #fff;
+    /* White background for better contrast on gray page */
+    padding: 10px;
+    /* Ultra-compact */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-top: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.form-section-title {
+    margin: 0 0 20px 0;
+    color: #444;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.event-dates-row {
+    display: flex;
+    gap: 2px;
+    /* Ultra-compact */
+    align-items: center;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+/* Date/Time Group Layout */
+.date-time-group {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    /* Ultra-compact */
+}
+
+/* Specific widths for event inputs to ensure fit */
+.event-date-input {
+    width: 105px;
+    /* Ultra-compact */
+    font-size: 12px;
+    padding: 4px 2px;
+}
+
+.event-time-input {
+    width: 75px;
+    /* Ultra-compact */
+    font-size: 12px;
+    padding: 4px 2px;
+}
+
+/* Compact "Atual" Button */
+.date-time-group .btn-xs {
+    padding: 2px 6px;
+    font-size: 11px;
+    height: 24px;
+    margin-left: 2px;
+}
+
+
+/* Adjust label width for inline form consistency */
+.inline-event-form label {
+    width: 70px;
+    /* Fixed width to align all inputs vertically */
+    text-align: right;
+    margin-right: 5px;
+    /* Reduced from 15px */
+    font-weight: 600;
+    color: #555;
+    flex-shrink: 0;
+}
+
+.inline-event-form .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode for Inline Even Form */
+body.dark-mode .inline-event-form {
+    background-color: #252526;
+    border-color: #3e3e42;
+}
+
+body.dark-mode .form-section-title {
+    color: #d4d4d4;
+}
+
+body.dark-mode .inline-event-form label {
+    color: #9cdcfe;
+}
+
+body.dark-mode .input-with-icon i {
+    color: #777;
+    /* Make icons slightly lighter in dark mode */
+}
+
+/* Ensure inputs in the new form take dark mode styles */
+body.dark-mode .inline-event-form input,
+body.dark-mode .inline-event-form textarea {
+    background-color: #3c3c3c;
+    border: 1px solid #3c3c3c;
+    color: #cccccc;
+}
+
+
+body.dark-mode .inline-event-form input:focus,
+body.dark-mode .inline-event-form textarea:focus {
+    border-color: #007fd4;
+}
+
+/* Ticket Details Split Layout */
+.ticket-details-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.ticket-details-left {
+    flex: 1;
+}
+
+.ticket-details-right {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+/* Adjust label in right column to be top-aligned */
+.ticket-details-right .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ticket-details-right .form-group label {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+
+.ticket-details-right .contract-scope-list {
+    padding-left: 18px;
+    margin-top: 5px;
+}
+
+.contract-scope-list li {
+    margin-bottom: 8px;
+    color: #333;
+    /* Darker for better readability */
+    font-weight: 600;
+    /* Increased weight */
+    line-height: 1.5;
+}
+
+/* Dark Mode for list */
+body.dark-mode .contract-scope-list li {
+    color: #e0e0e0;
+    /* Lighter in dark mode */
+}
+
+/* Dark Mode for list */
+
+/* Event Inputs Alignment */
+.event-duration-input {
+    width: 150px;
+    background-color: #eee;
+    /* Explicit disabled look */
+    cursor: not-allowed;
+}
+
+.event-description-input {
+    width: 100%;
+    /* Fill remaining space */
+    height: 60px;
+    resize: vertical;
+}
+
+.label-textarea {
+    margin-top: 5px;
+    /* Alignment for top of textarea */
+    align-self: flex-start;
+}
+
+/* Dark Mode for Event Inputs */
+body.dark-mode .event-duration-input {
+    background-color: #3c3c3c;
+    color: #888;
+    border-color: #444;
+}/* Vertical Date Time Group */
+.date-time-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.time-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.height-fix {
+    height: 35px;
+    /* Matches standard input height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
